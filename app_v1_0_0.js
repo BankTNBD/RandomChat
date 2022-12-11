@@ -35,7 +35,7 @@ $(function () {
     }
 
     connection.onerror = function (error) {
-        content.html('<p>Sorry, but there\'s some problem with your connection or the server is down. <a href="http://randomchat.iambanky.com/">Visit http://randomchat.iambanky.com</a></p>')
+        content.html('<p>Sorry, but there\'s some problem with your connection or the server is down.</p> <a href="http://randomchat.iambanky.com/">Visit http://randomchat.iambanky.com</a>')
     }
 
     connection.onmessage = function (message) {

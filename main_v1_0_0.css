@@ -1,0 +1,107 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Mali", cursive;
+	background: #efefef;
+	height: 100%;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+.headerText .creditText {
+	text-align: center;
+	padding-top: 20px;
+	color: #000000;
+	font-size: x-large;
+}
+
+.contentBox {
+	width: 100%;
+	height: 60vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.contentBox .box {
+	width: 80%;
+	height: 100%;
+	box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.3);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 10px 10px 10px 10px;
+	min-width: 200px;
+}
+
+.contentBox .box .chat {
+	width: 100%;
+	height: 100%;
+	margin: 20px;
+	padding-left: 20px;
+	background-color: white;
+	font-size: medium;
+	overflow-y: scroll;
+}
+
+.historyChat {
+	line-height: 200%;
+}
+
+.description {
+	text-align: center;
+	padding-top: 20px;
+	font-size: x-large;
+	color: #000000;
+}
+
+.nameInput {
+	width: 75%;
+	min-width: 200px;
+	height: 30px;
+	text-align: center;
+	border-radius: 10px;
+	border: none;
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 32px;
+	height: 32px;
+	margin: 10px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+button {
+	font-family: 'Mali', cursive;
+	border: none;
+	color: #090909;
+	margin-top: 20px;
+	padding: 0.7em 1.7em;
+	font-size: small;
+	border-radius: 0.5em;
+	background: #e8e8e8;
+	border: 1px solid #e8e8e8;
+	transition: all 0.3s;
+	box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+button:active {
+	color: #666;
+	box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}

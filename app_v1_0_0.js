@@ -6,7 +6,7 @@ $(function () {
     var status = $('#status')
 
     window.WebSocket = window.WebSocket || window.MozWebSocket;
-
+    content.html('<a href="http://randomchat.iambanky.com/">Visit http://randomchat.iambanky.com</a>')
     if (!window.WebSocket) {
         content.html($('<p>', {
             text: 'Sorry, but your browser doesn\'t '
@@ -21,6 +21,7 @@ $(function () {
     var connection = new WebSocket('ws://server.iambanky.com:3000')
 
     connection.onopen = function () {
+        content.html('')
         if (localStorage.name === undefined || localStorage.color === undefined ) {
             input.removeAttr('disabled')
             status.text('Choose name:')

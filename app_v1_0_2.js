@@ -123,9 +123,11 @@ $(function () {
                 connection.send(`{ "name": "${localStorage.name}", "color": "${localStorage.color}"}`);
                 status.text(localStorage.name + ':').css("color", localStorage.color)
                 input.val('')
+                input.focus()
             } else {
                 connection.send(`{ "msg": "${msg}"}`)
                 input.val('')
+                input.focus()
             } 
     })
 })

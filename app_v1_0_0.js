@@ -110,4 +110,22 @@ $(function () {
         localStorage.clear()
         location.reload()
       })
+
+    $("#sendButton").click(function(){
+        var msg = input.val()
+            if (!msg) {
+                return
+            }
+
+            if (localStorage.name === undefined || localStorage.color === undefined) {
+                localStorage.name = msg;
+                localStorage.color = $('#color').val()
+                connection.send(`{ "name": "${localStorage.name}", "color": "${localStorage.color}"}`);
+                status.text(localStorage.name + ':').css("color", localStorage.color)
+                input.val('')
+            } else {
+                connection.send(`{ "msg": "${msg}"}`)
+                input.val('')
+            } 
+    })
 })
